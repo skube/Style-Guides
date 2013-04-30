@@ -8,7 +8,6 @@ Here is what we'll cover:
 
 * [Terminology](#terminology)
 * [Style](#style)
-	* Basics
 	* Comments
 	* File structure
 	* Constructors
@@ -47,16 +46,31 @@ operator            | `+`, `-`, `!`, `++`, `===`, `&&`, `typeof`
 
 ##Style
 
-###Basics
+### 4 Spaces for indention
 
-* Always use semicolons (controversial nowadays) - do not rely on the JavaScript engine to handle ASI ('*Automatic Semicolon Insertion*').
-* Use single quotes `''` instead of double quotes `""` as they look cleaner/clearer when scaning code (the exception to this rule is when you're adding a string of text, as you're more likely to need to escape a `"` than `'` -  
-e.g `"I'm stuck here until they're finished working"`).
-* Never mix spaces and tabs.
-* Use four spaces to represent a single tab.
-* Use multiple var statements (not one var statement for multiple variables - let your minifier/build script handle that for you)
-	* With the exception of variables that have no value: `var name, age, location;` and these should come last in the list of variables.
-* Only use a function expression `var x = function(){};` when you absolutely must (e.g. when you need to execute a function immediately and store its return value `var x = (function(){ /* some expensive operation*/ return 'results of operation'; }());`). Otherwise use a function declaration instead.
+Use 4 spaces for indenting your code and swear an oath to _never mix tabs and
+spaces_ - a special kind of hell is awaiting you otherwise.
+
+### No trailing whitespace
+
+Just like you brush your teeth after every meal, you clean up any trailing
+whitespace in your JS files before committing. 
+
+### Use Semicolons
+
+According to [scientific research][hnsemicolons], the usage of semicolons is
+a core values of our community. Consider the points of [the opposition][], but
+be a traditionalist when it comes to abusing error correction mechanisms for
+cheap syntactic pleasures.
+
+[the opposition]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
+[hnsemicolons]: http://news.ycombinator.com/item?id=1547647
+
+### 80 characters per line
+
+Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
+last few years, but your brain has not. Use the additional room for split screen,
+your editor supports that, right? Also, source control does merges by line.
 
 ###Comments
 
@@ -729,32 +743,6 @@ Avoid jQuery unless absolutely necessary.
 
 ***
 
-## 2 Spaces for indention
-
-Use 2 spaces for indenting your code and swear an oath to never mix tabs and
-spaces - a special kind of hell is awaiting you otherwise.
-
-## No trailing whitespace
-
-Just like you brush your teeth after every meal, you clean up any trailing
-whitespace in your JS files before committing. Otherwise the rotten smell of
-careless neglect will eventually drive away contributors and/or co-workers.
-
-## Use Semicolons
-
-According to [scientific research][hnsemicolons], the usage of semicolons is
-a core values of our community. Consider the points of [the opposition][], but
-be a traditionalist when it comes to abusing error correction mechanisms for
-cheap syntactic pleasures.
-
-[the opposition]: http://blog.izs.me/post/2353458699/an-open-letter-to-javascript-leaders-regarding
-[hnsemicolons]: http://news.ycombinator.com/item?id=1547647
-
-## 80 characters per line
-
-Limit your lines to 80 characters. Yes, screens have gotten much bigger over the
-last few years, but your brain has not. Use the additional room for split screen,
-your editor supports that, right?
 
 ## Use single quotes
 
