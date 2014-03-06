@@ -79,8 +79,8 @@ For function descriptions use the JSDoc variety of comment ([see here](https://d
 ```js
 /**
  * Main function description
- * @param {number} description
- * @param {string|number|null} description
+ * @param {number} name  description
+ * @param {string|number|null} name description
  * @return {string} description
  */
 ```
