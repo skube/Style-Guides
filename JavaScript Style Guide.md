@@ -46,10 +46,12 @@ operator            | `+`, `-`, `!`, `++`, `===`, `&&`, `typeof`
 
 ##Style
 
-### 4 Spaces for indention
+### Tabs for indention, Spaces for alignment
 
-Use 4 spaces for indenting your code and swear an oath to _never mix tabs and
-spaces_ - a special kind of hell is awaiting you otherwise.
+Use tabs to indent the start of the line, one tab per indent level. Tab size of 4, by default. Using tabs allows everyone to set their own visual tab width in their editor of choice.
+
+Use spaces if you're lining up characters within a line, so they always line up regardless of tab size.
+
 
 ### No trailing whitespace
 
