@@ -787,17 +787,16 @@ Also, notice the use of whitespace before and after the condition statement.
 
 ## Declare one variable per var statement
 
-Use one var statement to declare multiple variables at once.
+As per Crockford, use one var statement for each variable. Why? Var keyword might be susciptable to automatic 
+semicolon insertion would result in creation of global vars. Also, helps maintain consistency, and ability to add/remove vars w/o errant commas, or semicolons.
 
 *Right:*
 
 ```js
-var 
-  keys   = ['foo', 'bar'],
-  values = [23, 42],
-  object = {},
-  key;
-  
+var keys = ['foo', 'bar'];
+var values = [23, 42],;
+var object = {};
+
 while (items.length) {
   var key = keys.pop();
   object[key] = values.pop();
@@ -807,10 +806,12 @@ while (items.length) {
 *Wrong:*
 
 ```js
-var keys = ['foo', 'bar'];
-var values = [23, 42],;
-var object = {};
-
+var  
+  keys   = ['foo', 'bar'],
+  values = [23, 42],
+  object = {},
+  key;
+  
 while (items.length) {
   var key = keys.pop();
   object[key] = values.pop();
